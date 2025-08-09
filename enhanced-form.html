@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Enhanced Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        header, main, footer {
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 4px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table, th, td {
+            border: 1px solid #aaa;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+        }
+        ul {
+            margin-top: 10px;
+        }
+        .readonly-field {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Registration Form</h1>
+</header>
+
+<main>
+
+    <section>
+        <h2>Instruction</h2>
+        <ul>
+            <li>Fill out all required fields.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>User Registration Form</h2>
+        <form action="/submit" method="POST" autocomplete="on">
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Choose a strong password" required minlength="6">
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g., +1234567890" pattern="^\+?\d{10,15}$" required>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">-- Select Country --</option>
+                <option value="usa">Kenya</option>
+                <option value="uk">Ethiopia</option>
+                <option value="canada">Morocco</option>
+                <option value="other">Angola</option>
+            </select>
+
+            <label for="bio">Short Bio:</label>
+            <textarea id="bio" name="bio" placeholder="Tell us a bit about yourself..." rows="4" required></textarea>
+
+
+            <label for="gender">Gender:</label>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+
+            <label for="referral">How did you hear about us?</label>
+            <input type="text" id="referral" name="referral" placeholder="e.g., Friend, Ad" autocomplete="off">
+
+
+            <br><br>
+            <button type="submit">Submit Form</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Media Section</h2>
+
+        <figure>
+            <img src="https://images.pexels.com/photos/27048764/pexels-photo-27048764.jpeg" alt= "image will show here" width="300" height="300">
+        </figure>
+
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.    
+        </audio>
+
+        <video controls>
+            <source src="movie.mp4" type="video/mp4" width="320" height="240">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+</main>
+
+</body>
+</html>
+
